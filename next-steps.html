@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Limitations and next steps: Vegetation Dynamics under Mining and Monsoon Variability</title>
+<meta name="description" content="Limitations of the current analysis and planned work, including pixel-level trend mapping and mine-level disturbance data.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='4' height='16' fill='%23b07d2a'/%3E%3Crect x='4' width='4' height='16' fill='%23d9c46a'/%3E%3Crect x='8' width='4' height='16' fill='%238fbc5a'/%3E%3Crect x='12' width='4' height='16' fill='%233c7a3b'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<details class="mobile-nav"><summary>Singareni vegetation study</summary><nav class="nav" aria-label="Chapters"><ol><li><a href="index.html">Overview</a></li><li><a href="study-area.html">Study area</a></li><li><a href="data.html">Data</a></li><li><a href="methods.html">Methods</a></li><li><a href="results.html">Results</a></li><li><a href="discussion.html">Discussion</a></li><li><a href="next-steps.html" aria-current="page">Limitations and next steps</a></li><li><a href="references.html">References</a></li><li><a href="downloads.html">Downloads and reproducibility</a></li></ol></nav></details>
+<div class="shell">
+<aside class="side">
+  <a class="brand" href="index.html"><span class="brand-ramp" aria-hidden="true"></span>
+    <span class="brand-title">Vegetation Dynamics under Mining and Monsoon Variability</span>
+    <span class="brand-sub">Temporal and Spatial Study of the Singareni Coalfields, Telangana</span></a>
+  <nav class="nav" aria-label="Chapters"><ol><li><a href="index.html">Overview</a></li><li><a href="study-area.html">Study area</a></li><li><a href="data.html">Data</a></li><li><a href="methods.html">Methods</a></li><li><a href="results.html">Results</a></li><li><a href="discussion.html">Discussion</a></li><li><a href="next-steps.html" aria-current="page">Limitations and next steps</a></li><li><a href="references.html">References</a></li><li><a href="downloads.html">Downloads and reproducibility</a></li></ol></nav>
+  <div class="side-foot">M.Tech dissertation, Phase I<br>Department of Computer Science and Engineering, Amrita School of Computing, Coimbatore<br><br><a href="downloads.html">Data and code</a></div>
+</aside>
+<main id="content">
+
+<div class="col">
+<p class="chapter">Chapter 7</p>
+<h1>Limitations and next steps</h1>
+<p class="lede">What the current analysis cannot answer, and the work planned to answer it.</p>
+
+<h2>Limitations</h2>
+<ul>
+<li><strong>One scene per year.</strong> A single January or February date captures the dry season but is sensitive to crop timing; scene dates ranged from 11 January to 27 February.</li>
+<li><strong>Mixed sensors.</strong> TM, ETM+ and OLI have different band widths and no cross-sensor adjustment was applied. Part of the step around 2012–2014 may come from the sensor change.</li>
+<li><strong>Landsat 7 gaps.</strong> The 2012 and 2013 scenes have scan-line gaps, so fewer pixels count in those years.</li>
+<li><strong>Company-wide production.</strong> SCCL totals cover all its areas, so they measure mining at the nine leases only loosely.</li>
+<li><strong>Short series.</strong> With 21 matched years, only correlations above about 0.43 reach significance, and many tests were run.</li>
+<li><strong>Coarse climate data.</strong> The IMD and ERA5 grids are about 0.25°, too coarse to tell the zones apart.</li>
+<li><strong>Zone means hide mixed land cover.</strong> Each zone mixes pits, dumps, reclaimed land, farmland, settlements, water and forest, which can change in opposite directions.</li>
+<li><strong>Lease interiors in the 0–1 km zone.</strong> The zone includes the mine floor, so its lower NDVI does not by itself show an effect outside the leases.</li>
+</ul>
+
+<h2>Planned work</h2>
+<ol class="steps">
+<li><h3>Pixel-level trend map</h3><p>Run Mann–Kendall and Sen's slope on every 30 m pixel to map where vegetation increased, decreased or stayed stable. Overlaying the map on imagery shows whether greening follows canals, dumps or forest. A ready script is in <a href="downloads.html#code">Downloads</a>.</p></li>
+<li><h3>Rings outside the leases</h3><p>Compute the 0–1 km statistics for land outside the lease boundaries only, to test whether mining suppresses vegetation beyond the boundary. The pixel script reports this split.</p></li>
+<li><h3>Cross-sensor harmonisation</h3><p>Adjust Landsat 5 and 7 NDVI to match Landsat 8 using published coefficients, and use several scenes per season to build composites.</p></li>
+<li><h3>Mine-level disturbance</h3><p>Map bare and pit area per lease per year from the imagery, for example with LandTrendr (Xiao et al., 2020), and use it in place of company production.</p></li>
+<li><h3>Land cover separation</h3><p>Classify land cover for selected years, following Garai and Narayana (2018), and compute trends separately for farmland, forest, reclaimed land and active mine surfaces.</p></li>
+<li><h3>Driver data and a combined model</h3><p>Collect irrigated area, plantation and reclamation records, groundwater or soil moisture, and fit one model with these drivers and year together.</p></li>
+</ol>
+</div>
+
+<nav class="pager" aria-label="Previous and next chapter"><a class="prev" href="discussion.html"><span class="dir">Previous</span>Discussion</a><a class="next" href="references.html"><span class="dir">Next</span>References</a></nav>
+<p class="foot">Last updated November 2026. Landsat data courtesy of USGS. Rainfall from IMD, temperature from ECMWF ERA5, lease boundaries from TGRAC, production from SCCL annual reports.</p>
+</main>
+</div>
+</body>
+</html>

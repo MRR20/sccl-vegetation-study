@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discussion: Vegetation Dynamics under Mining and Monsoon Variability</title>
+<meta name="description" content="Discussion: what drives the greening, the effect of distance from the mines, and why raw production correlations mislead.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='4' height='16' fill='%23b07d2a'/%3E%3Crect x='4' width='4' height='16' fill='%23d9c46a'/%3E%3Crect x='8' width='4' height='16' fill='%238fbc5a'/%3E%3Crect x='12' width='4' height='16' fill='%233c7a3b'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<details class="mobile-nav"><summary>Singareni vegetation study</summary><nav class="nav" aria-label="Chapters"><ol><li><a href="index.html">Overview</a></li><li><a href="study-area.html">Study area</a></li><li><a href="data.html">Data</a></li><li><a href="methods.html">Methods</a></li><li><a href="results.html">Results</a></li><li><a href="discussion.html" aria-current="page">Discussion</a></li><li><a href="next-steps.html">Limitations and next steps</a></li><li><a href="references.html">References</a></li><li><a href="downloads.html">Downloads and reproducibility</a></li></ol></nav></details>
+<div class="shell">
+<aside class="side">
+  <a class="brand" href="index.html"><span class="brand-ramp" aria-hidden="true"></span>
+    <span class="brand-title">Vegetation Dynamics under Mining and Monsoon Variability</span>
+    <span class="brand-sub">Temporal and Spatial Study of the Singareni Coalfields, Telangana</span></a>
+  <nav class="nav" aria-label="Chapters"><ol><li><a href="index.html">Overview</a></li><li><a href="study-area.html">Study area</a></li><li><a href="data.html">Data</a></li><li><a href="methods.html">Methods</a></li><li><a href="results.html">Results</a></li><li><a href="discussion.html" aria-current="page">Discussion</a></li><li><a href="next-steps.html">Limitations and next steps</a></li><li><a href="references.html">References</a></li><li><a href="downloads.html">Downloads and reproducibility</a></li></ol></nav>
+  <div class="side-foot">M.Tech dissertation, Phase I<br>Department of Computer Science and Engineering, Amrita School of Computing, Coimbatore<br><br><a href="downloads.html">Data and code</a></div>
+</aside>
+<main id="content">
+
+<div class="col">
+<p class="chapter">Chapter 6</p>
+<h1>Discussion</h1>
+<p class="lede">Greening is real, the mines hold it back nearby, and neither the monsoon nor company production explains it.</p>
+
+<h2>What the data rules out</h2>
+<p>Rainfall and temperature have no trend over the period, so they cannot drive a steady 20-year rise. Company-wide production rises steadily too, but once the shared time trend is removed it has no relationship with NDVI. What remains are explanations that also trend over time and were not measured in this study:</p>
+<ul>
+<li>expansion of irrigated farming in Peddapalli and Mancherial districts;</li>
+<li>plantation and green-belt work by SCCL and other agencies;</li>
+<li>reclamation of older overburden dumps;</li>
+<li>the change of sensor from Landsat 5 TM to Landsat 8 OLI, which do not record NDVI identically.</li>
+</ul>
+<p>Each needs its own data to test. The <a href="next-steps.html">next steps</a> chapter lists how.</p>
+
+<h2>Distance from the mines</h2>
+<p>The 0–1 km zone stayed the least green, had the lowest τ, and fell furthest in poor years such as 2008, 2009 and 2012. That is the pattern expected if the mines hold vegetation down locally while the wider landscape greens. Moon et al. (2026) report restoration rising with distance in Jharia, and Ranjan et al. (2022) found mining land in eastern India responding less to climate than forest. The result here agrees with both, though the gap between zones is small, about 0.007 NDVI, and part of it is simply the bare pit floor inside the 0–1 km zone.</p>
+
+<h2>Why the production correlation misleads</h2>
+<p>Two series that trend over the same years correlate whether or not they are linked. That is what happened with production. This does not show that mining has no effect on vegetation. It shows that annual output for the whole company is a poor measure of mining at nine leases. Output can grow while the area newly cleared at a given lease stays the same, and production from mines outside the study area is counted in the total. Mine-level measures, such as the bare or pit area of each lease each year, would be a fair test.</p>
+
+<h2>Unusual years</h2>
+<p>The 2012 low needs caution. The 2011 monsoon was dry (−377 mm), so some drop is expected, but 2012 is also the first Landsat 7 year, with scan-line gaps and a change of sensor. Its drop is larger than in 2005, which followed the much drier 2004 monsoon, so part of the 2012 dip may come from the sensor. The 2020 peak followed a near-normal monsoon (+34 mm) and a cool dry season (−0.60 °C), which fits the temperature signal.</p>
+
+<h2>Changes from the panel reviews</h2>
+<p>Panel Review 1 reported Sen's slopes of 0.002079–0.002458 per year for 2004–2026. Panel Review 2 used 2005–2026 and reported 0.002351–0.002638, which matches the results on this site. Panel Review 2 also reported the raw production correlations as evidence of a mining effect. The detrending analysis on this site was added afterwards and changes that conclusion.</p>
+
+<div class="note"><p class="note-title">Summary</p><p>The Singareni area greened steadily over 22 years. Neither the monsoon nor SCCL's annual production explains that greening. Areas next to the mines stayed browner than areas farther away. The driver of the regional greening has not been identified yet.</p></div>
+</div>
+
+<nav class="pager" aria-label="Previous and next chapter"><a class="prev" href="results.html"><span class="dir">Previous</span>Results</a><a class="next" href="next-steps.html"><span class="dir">Next</span>Limitations and next steps</a></nav>
+<p class="foot">Last updated November 2026. Landsat data courtesy of USGS. Rainfall from IMD, temperature from ECMWF ERA5, lease boundaries from TGRAC, production from SCCL annual reports.</p>
+</main>
+</div>
+</body>
+</html>

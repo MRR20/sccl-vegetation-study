@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Results: Vegetation Dynamics under Mining and Monsoon Variability</title>
+<meta name="description" content="Results: NDVI trends by zone, spatial maps, anomalies, climate and production records, raw versus detrended correlations and regression.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='4' height='16' fill='%23b07d2a'/%3E%3Crect x='4' width='4' height='16' fill='%23d9c46a'/%3E%3Crect x='8' width='4' height='16' fill='%238fbc5a'/%3E%3Crect x='12' width='4' height='16' fill='%233c7a3b'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<details class="mobile-nav"><summary>Singareni vegetation study</summary><nav class="nav" aria-label="Chapters"><ol><li><a href="index.html">Overview</a></li><li><a href="study-area.html">Study area</a></li><li><a href="data.html">Data</a></li><li><a href="methods.html">Methods</a></li><li><a href="results.html" aria-current="page">Results</a></li><li><a href="discussion.html">Discussion</a></li><li><a href="next-steps.html">Limitations and next steps</a></li><li><a href="references.html">References</a></li><li><a href="downloads.html">Downloads and reproducibility</a></li></ol></nav></details>
+<div class="shell">
+<aside class="side">
+  <a class="brand" href="index.html"><span class="brand-ramp" aria-hidden="true"></span>
+    <span class="brand-title">Vegetation Dynamics under Mining and Monsoon Variability</span>
+    <span class="brand-sub">Temporal and Spatial Study of the Singareni Coalfields, Telangana</span></a>
+  <nav class="nav" aria-label="Chapters"><ol><li><a href="index.html">Overview</a></li><li><a href="study-area.html">Study area</a></li><li><a href="data.html">Data</a></li><li><a href="methods.html">Methods</a></li><li><a href="results.html" aria-current="page">Results</a></li><li><a href="discussion.html">Discussion</a></li><li><a href="next-steps.html">Limitations and next steps</a></li><li><a href="references.html">References</a></li><li><a href="downloads.html">Downloads and reproducibility</a></li></ol></nav>
+  <div class="side-foot">M.Tech dissertation, Phase I<br>Department of Computer Science and Engineering, Amrita School of Computing, Coimbatore<br><br><a href="downloads.html">Data and code</a></div>
+</aside>
+<main id="content">
+
+<div class="col">
+<p class="chapter">Chapter 5</p>
+<h1>Results</h1>
+<p class="lede">The greening is clear. The climate record does not trend. The production link disappears once time is accounted for.</p>
+
+<h2>NDVI by zone</h2>
+<p>The three zones move together from year to year, so most short-term change is regional rather than local to the mines. The 0–1 km zone was the least green in 19 of the 22 years; the exceptions were 2006 (when the 3–5 km zone was marginally lower), 2022 and 2026. Over the whole period it averaged 0.1587, against 0.1650 and 0.1657 for the outer zones.</p>
+<p>NDVI fell from 2005 to 2009, recovered in 2010 and 2011, dropped sharply in 2012 and then rose to a higher level from 2013. The highest values came in 2020 (0.190, 0.203 and 0.206) and the lowest in 2012 (0.120, 0.132 and 0.130). The 2022–2026 average was 30%, 27% and 32% above the 2005–2009 average in the three zones.</p>
+</div>
+<div class="wide"><figure><img src="assets/img/ndvi_zone_trend.png" alt="Line chart of NDVI for three zones from 2005 to 2026, all rising from about 0.14 to about 0.19, with dashed trend lines." loading="lazy"><figcaption><b>Figure 5.1.</b> Mean January–February NDVI by zone, 2005–2026, with Sen's slope trend lines (dashed).</figcaption></figure></div>
+<div class="col">
+<h2>Trend tests</h2>
+<div class="table-wrap"><table><caption>Table 5.1. Mann–Kendall and Sen's slope results for mean NDVI, 2005–2026 (n = 22).</caption><thead><tr><th scope="col">Zone</th><th scope="col" class="num">S</th><th scope="col" class="num">τ</th><th scope="col" class="num">Z</th><th scope="col" class="num">p</th><th scope="col" class="num">Sen's slope (per year)</th><th scope="col" class="num">Lag-1 r</th><th scope="col" class="num">p, pre-whitened</th></tr></thead><tbody><tr><td>0–1 km</td><td class="num">131</td><td class="num">0.567</td><td class="num">3.67</td><td class="num">0.00025</td><td class="num">0.002354</td><td class="num">0.68</td><td class="num">0.075</td></tr><tr><td>1–3 km</td><td class="num">139</td><td class="num">0.602</td><td class="num">3.89</td><td class="num">0.00010</td><td class="num">0.002351</td><td class="num">0.71</td><td class="num">0.050</td></tr><tr><td>3–5 km</td><td class="num">149</td><td class="num">0.645</td><td class="num">4.17</td><td class="num">0.00003</td><td class="num">0.002638</td><td class="num">0.75</td><td class="num">0.065</td></tr><tr><td>Overall</td><td class="num">145</td><td class="num">0.628</td><td class="num">4.06</td><td class="num">0.00005</td><td class="num">0.002486</td><td class="num">0.73</td><td class="num">0.050</td></tr></tbody></table></div>
+<p>All three zones show a significant upward trend. Kendall's τ rises with distance from the mines, from 0.567 to 0.645, so the trend is most consistent in the outer zone. Sen's slope is highest there too, about 0.026 NDVI per decade.</p>
+<p>The Hamed–Rao correction left the p-values unchanged. The stricter pre-whitening test raised them to 0.050–0.075. The direction of change is not in doubt, but with only 22 years the formal significance depends on how serial correlation is treated. Including the 2004 scene still gives significant trends, with slopes of 0.00208, 0.00220 and 0.00246 per year.</p>
+
+<h2>Spatial pattern</h2>
+<p>Lease interiors, pits and dumps stay low in every year. The outer zones, especially in the south, turn greener after 2015. The orange band crossing the middle in 2020 and 2025 is the Godavari channel, which probably held more water on those scene dates.</p>
+</div>
+<div class="wide">
+<figure><img src="assets/img/ndvi_selected_years.png" alt="Five maps of NDVI around the leases for 2005, 2010, 2015, 2020 and 2025, becoming greener in later years outside the leases." loading="lazy"><figcaption><b>Figure 5.2.</b> NDVI within 5 km of the leases in 2005, 2010, 2015, 2020 and 2025. Lease outlines in brown; 1, 3 and 5 km buffer lines in blue, cyan and brown.</figcaption></figure>
+<div class="fig-pair">
+<figure><img src="assets/img/mean_ndvi_map.jpg" alt="Map of mean NDVI 2005 to 2025 around the leases." loading="lazy"><figcaption><b>Figure 5.3.</b> Mean NDVI, 2005–2025.</figcaption></figure>
+<figure><img src="assets/img/sd_ndvi_map.jpg" alt="Map of the year-to-year standard deviation of NDVI around the leases." loading="lazy"><figcaption><b>Figure 5.4.</b> Standard deviation of NDVI, 2005–2025: how much each pixel changed from year to year.</figcaption></figure>
+</div>
+</div>
+<div class="col">
+<h2>NDVI anomalies</h2>
+<p>For the area as a whole, every year from 2005 to 2013 was below the 2005–2025 mean, and every year from 2014 to 2025 was above it except 2018. That split is what a rising series always looks like when measured from a fixed mean. The largest negative anomalies were 2012 (−0.037 in the 0–1 km zone) and 2009 (−0.033); the largest positive were 2020 (+0.033 to +0.041) and 2025 (+0.029 to +0.031). The 0–1 km zone had the deepest drops in 2008, 2009 and 2012.</p>
+</div>
+<div class="wide"><figure><img src="assets/img/ndvi_anomaly.png" alt="Line chart of NDVI anomalies, negative from 2005 to 2013 with a low in 2012, mostly positive from 2014 with peaks in 2020 and 2025." loading="lazy"><figcaption><b>Figure 5.5.</b> NDVI anomalies of the three zones relative to the 2005–2025 mean.</figcaption></figure></div>
+
+<div class="col">
+<h2>Climate</h2>
+<p>Monsoon rainfall swung widely, from 455 mm (2004) and 543 mm (2017) to 1368 mm (2010) and 1522 mm (2022), but neither annual nor monsoon rainfall had a significant trend (Mann–Kendall p = 0.20 and 0.24). Annual temperature ranged from 26.9 °C (2013) to 28.3 °C (2009), and January–February temperature from 23.0 °C (2022) to 25.9 °C (2009 and 2016); neither trended (p = 0.78 and 0.54).</p>
+<p>A climate record with no trend cannot explain a 20-year rise in NDVI. It can only explain the ups and downs around it.</p>
+</div>
+<div class="wide"><div class="fig-pair">
+<figure><img src="assets/img/rain_anomaly.png" alt="Bar charts of annual and June to September rainfall anomalies from 2004 to 2025, alternating between wet and dry years with no clear trend." loading="lazy"><figcaption><b>Figure 5.6.</b> Annual and monsoon rainfall anomalies (IMD).</figcaption></figure>
+<figure><img src="assets/img/temp_anomaly.png" alt="Bar charts of annual and January to February temperature anomalies from 2004 to 2025 with no clear trend." loading="lazy"><figcaption><b>Figure 5.7.</b> Annual and January–February temperature anomalies (ERA5).</figcaption></figure>
+</div></div>
+
+<div class="col">
+<h2>Coal production</h2>
+<p>Total output roughly doubled, from 353.03 lakh tonnes in 2004–05 to a peak of 700.21 in 2023–24, with one drop to 505.80 in 2020–21, the year of the COVID-19 lockdowns. Opencast output rose by about 20.5 lakh tonnes a year and underground output fell by about 3.6 (Sen's slope, both p &lt; 0.001). Opencast output correlates with calendar year at r = 0.97, underground at r = −0.94.</p>
+</div>
+<div class="wide"><figure><img src="assets/img/sccl_production.png" alt="Line chart of SCCL production from 2004-05 to 2024-25: total and opencast rising steadily with a dip in 2020-21, underground falling." loading="lazy"><figcaption><b>Figure 5.8.</b> SCCL opencast, underground and total production by financial year (SCCL annual reports).</figcaption></figure></div>
+
+<div class="col">
+<h2>Raw and detrended correlations</h2>
+<p>On the raw series, production gave large, highly significant correlations with NDVI, and rainfall gave modest, non-significant ones. Read literally, the production values say that more opencast coal goes with greener land and that the zone farthest from the mines is affected most. Neither makes physical sense. Panel (a) of Figure 5.10 shows why: the points are ordered by year.</p>
+</div>
+<div class="wide"><figure><img src="assets/img/corr_raw_vs_detrended.png" alt="Two heatmaps. In the raw panel the production columns show strong red and blue values around plus and minus 0.7. In the detrended panel the production values are pale, between minus 0.28 and 0.11, and only January to February temperature in the 0 to 1 km zone is starred at minus 0.48." loading="lazy"><figcaption><b>Figure 5.9.</b> Pearson correlation of NDVI anomalies with climate and production, (a) raw and (b) after removing the linear time trend from both series. Asterisks mark p &lt; 0.05 (n = 21).</figcaption></figure></div>
+<div class="col">
+<div class="table-wrap"><table><caption>Table 5.2. Range of Pearson r across the three zones and the overall mean, before and after linear detrending (n = 21). Full values are in the downloads.</caption><thead><tr><th scope="col">Driver</th><th scope="col">r, raw</th><th scope="col">p, raw</th><th scope="col">r, detrended</th><th scope="col">p, detrended</th></tr></thead><tbody><tr><td>Opencast production</td><td>0.70 to 0.76</td><td>< 0.001</td><td>−0.22 to −0.28</td><td>0.22 to 0.34</td></tr><tr><td>Underground production</td><td>−0.69 to −0.76</td><td>< 0.001</td><td>0.10 to 0.11</td><td>≥ 0.64</td></tr><tr><td>Total production</td><td>0.67 to 0.73</td><td>< 0.001</td><td>−0.16 to −0.21</td><td>≥ 0.36</td></tr><tr><td>Monsoon rainfall (previous year)</td><td>0.33 to 0.37</td><td>0.10 to 0.14</td><td>0.09 to 0.13</td><td>≥ 0.58</td></tr><tr><td>Annual rainfall (previous year)</td><td>0.31 to 0.33</td><td>0.14 to 0.17</td><td>0.18 to 0.22</td><td>≥ 0.34</td></tr><tr><td>Annual temperature (previous year)</td><td>0.05 to 0.07</td><td>≥ 0.76</td><td>−0.07 to −0.09</td><td>≥ 0.71</td></tr><tr><td>January–February temperature</td><td>−0.16 to −0.28</td><td>≥ 0.21</td><td>−0.31 to −0.48</td><td>0.026 (0–1 km) to 0.17</td></tr></tbody></table></div>
+<p>After detrending, every production correlation collapsed and lost significance. First differences gave the same answer (|r| ≤ 0.34, p ≥ 0.14). The rainfall correlations weakened too, because part of the raw link came from wetter monsoons after 2018 coinciding with the greener late years.</p>
+</div>
+<div class="wide"><figure><img src="assets/img/oc_vs_ndvi_scatter.png" alt="Two scatter plots. In the raw plot points rise from lower left to upper right and are ordered by year. In the detrended plot the points form a cloud with no slope." loading="lazy"><figcaption><b>Figure 5.10.</b> Opencast production against overall NDVI anomaly: (a) raw values coloured by year; (b) residuals after linear detrending.</figcaption></figure></div>
+<div class="col">
+<p>One relationship grew stronger after detrending: January–February temperature in the 0–1 km zone (r = −0.48, p = 0.026; r = −0.55, p = 0.013 in first differences). A warm dry season dries out vegetation faster, and the zone with the most bare ground has the least buffer. The years fit: 2009 had the warmest January–February and the second-lowest NDVI, and 2022, the coolest, was the one year the 0–1 km zone was greener than both outer zones.</p>
+<div class="note caution"><p class="note-title">Treat the temperature result as a lead</p><p>28 detrended correlations were tested. With a Bonferroni correction the threshold becomes p &lt; 0.0018, and the temperature result does not pass it.</p></div>
+
+<h2>Regression</h2>
+<div class="table-wrap"><table><caption>Table 5.3. Least-squares models for the overall NDVI anomaly, 2005–2025 (n = 21).</caption><thead><tr><th scope="col">Predictors</th><th scope="col" class="num">R²</th><th scope="col" class="num">Adjusted R²</th><th scope="col">Notes</th></tr></thead><tbody><tr><td>Year</td><td class="num">0.652</td><td class="num">0.633</td><td>Slope 0.0026 NDVI per year, p < 0.001</td></tr><tr><td>Monsoon rainfall (previous year)</td><td class="num">0.124</td><td class="num">0.078</td><td>Not significant (p = 0.12)</td></tr><tr><td>Opencast production</td><td class="num">0.548</td><td class="num">0.524</td><td>Significant alone (p < 0.001)</td></tr><tr><td>Year + monsoon rainfall</td><td class="num">0.655</td><td class="num">0.617</td><td>Rainfall adds 0.003 to R² (p = 0.65)</td></tr><tr><td>Year + rainfall + opencast</td><td class="num">0.676</td><td class="num">0.618</td><td>Opencast coefficient negative, p = 0.32</td></tr></tbody></table></div>
+<p>Opencast production alone explains 55% of NDVI variance, but year alone explains 65%. Once year is in the model, neither rainfall nor production adds anything, and adjusted R² falls from 0.633 to 0.618. Production behaves as a stand-in for time.</p>
+</div>
+
+<nav class="pager" aria-label="Previous and next chapter"><a class="prev" href="methods.html"><span class="dir">Previous</span>Methods</a><a class="next" href="discussion.html"><span class="dir">Next</span>Discussion</a></nav>
+<p class="foot">Last updated November 2026. Landsat data courtesy of USGS. Rainfall from IMD, temperature from ECMWF ERA5, lease boundaries from TGRAC, production from SCCL annual reports.</p>
+</main>
+</div>
+</body>
+</html>

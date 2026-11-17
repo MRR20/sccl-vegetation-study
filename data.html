@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data: Vegetation Dynamics under Mining and Monsoon Variability</title>
+<meta name="description" content="Datasets: Landsat scenes, IMD rainfall, ERA5 temperature, SCCL coal production and TGRAC lease boundaries.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='4' height='16' fill='%23b07d2a'/%3E%3Crect x='4' width='4' height='16' fill='%23d9c46a'/%3E%3Crect x='8' width='4' height='16' fill='%238fbc5a'/%3E%3Crect x='12' width='4' height='16' fill='%233c7a3b'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<details class="mobile-nav"><summary>Singareni vegetation study</summary><nav class="nav" aria-label="Chapters"><ol><li><a href="index.html">Overview</a></li><li><a href="study-area.html">Study area</a></li><li><a href="data.html" aria-current="page">Data</a></li><li><a href="methods.html">Methods</a></li><li><a href="results.html">Results</a></li><li><a href="discussion.html">Discussion</a></li><li><a href="next-steps.html">Limitations and next steps</a></li><li><a href="references.html">References</a></li><li><a href="downloads.html">Downloads and reproducibility</a></li></ol></nav></details>
+<div class="shell">
+<aside class="side">
+  <a class="brand" href="index.html"><span class="brand-ramp" aria-hidden="true"></span>
+    <span class="brand-title">Vegetation Dynamics under Mining and Monsoon Variability</span>
+    <span class="brand-sub">Temporal and Spatial Study of the Singareni Coalfields, Telangana</span></a>
+  <nav class="nav" aria-label="Chapters"><ol><li><a href="index.html">Overview</a></li><li><a href="study-area.html">Study area</a></li><li><a href="data.html" aria-current="page">Data</a></li><li><a href="methods.html">Methods</a></li><li><a href="results.html">Results</a></li><li><a href="discussion.html">Discussion</a></li><li><a href="next-steps.html">Limitations and next steps</a></li><li><a href="references.html">References</a></li><li><a href="downloads.html">Downloads and reproducibility</a></li></ol></nav>
+  <div class="side-foot">M.Tech dissertation, Phase I<br>Department of Computer Science and Engineering, Amrita School of Computing, Coimbatore<br><br><a href="downloads.html">Data and code</a></div>
+</aside>
+<main id="content">
+
+<div class="col">
+<p class="chapter">Chapter 3</p>
+<h1>Data</h1>
+<p class="lede">Four public or institutional datasets, lined up year by year.</p>
+<div class="table-wrap"><table><caption>Table 3.1. Datasets used in the study.</caption><thead><tr><th scope="col">Dataset</th><th scope="col">Period</th><th scope="col">Source</th><th scope="col">Used for</th></tr></thead><tbody><tr><td>Landsat 5, 7, 8, 9 Collection 2 Level-2 surface reflectance</td><td>2004–2026</td><td>USGS EarthExplorer</td><td>Annual dry-season NDVI</td></tr><tr><td>SCCL annual reports</td><td>FY 2004–05 to 2024–25</td><td>SCCL</td><td>Opencast, underground and total coal production</td></tr><tr><td>Daily gridded rainfall, 0.25°</td><td>2004–2025</td><td>IMD</td><td>Annual and June–September rainfall</td></tr><tr><td>ERA5 2 m air temperature</td><td>2004–2025</td><td>ECMWF (Copernicus Climate Data Store)</td><td>Annual and January–February mean temperature</td></tr><tr><td>Mining lease boundaries</td><td></td><td>TGRAC</td><td>Lease selection and distance zones</td></tr></tbody></table></div>
+
+<h2>Landsat scenes</h2>
+<p>All scenes come from WRS-2 path 143, row 47. One scene was taken per year from January or February, the middle of the dry season. Crops are harvested or mature then, deciduous trees still carry leaves, and cloud is rare. Using the same season every year means the series compares like with like. Scenes with more than 10% cloud were rejected, and every scene used had 2% or less.</p>
+<div class="table-wrap"><table><caption>Table 3.2. Landsat scenes used. Cloud cover from the scene metadata.</caption><thead><tr><th scope="col">Year</th><th scope="col">Sensor</th><th scope="col">Acquired</th><th scope="col" class="num">Cloud cover (%)</th></tr></thead><tbody><tr><td>2004</td><td>Landsat 5 TM</td><td>09 Feb 2004</td><td class="num">1.00</td></tr><tr><td>2005</td><td>Landsat 5 TM</td><td>27 Feb 2005</td><td class="num">0.00</td></tr><tr><td>2006</td><td>Landsat 5 TM</td><td>14 Feb 2006</td><td class="num">0.00</td></tr><tr><td>2007</td><td>Landsat 5 TM</td><td>01 Feb 2007</td><td class="num">1.00</td></tr><tr><td>2008</td><td>Landsat 5 TM</td><td>20 Feb 2008</td><td class="num">1.00</td></tr><tr><td>2009</td><td>Landsat 5 TM</td><td>06 Feb 2009</td><td class="num">0.00</td></tr><tr><td>2010</td><td>Landsat 5 TM</td><td>24 Jan 2010</td><td class="num">0.00</td></tr><tr><td>2011</td><td>Landsat 5 TM</td><td>12 Feb 2011</td><td class="num">0.00</td></tr><tr><td>2012</td><td>Landsat 7 ETM+</td><td>23 Feb 2012</td><td class="num">0.00</td></tr><tr><td>2013</td><td>Landsat 7 ETM+</td><td>25 Feb 2013</td><td class="num">0.00</td></tr><tr><td>2014</td><td>Landsat 8 OLI</td><td>04 Feb 2014</td><td class="num">0.00</td></tr><tr><td>2015</td><td>Landsat 8 OLI</td><td>22 Jan 2015</td><td class="num">0.69</td></tr><tr><td>2016</td><td>Landsat 8 OLI</td><td>10 Feb 2016</td><td class="num">0.12</td></tr><tr><td>2017</td><td>Landsat 8 OLI</td><td>11 Jan 2017</td><td class="num">2.00</td></tr><tr><td>2018</td><td>Landsat 8 OLI</td><td>30 Jan 2018</td><td class="num">0.03</td></tr><tr><td>2019</td><td>Landsat 8 OLI</td><td>02 Feb 2019</td><td class="num">0.67</td></tr><tr><td>2020</td><td>Landsat 8 OLI</td><td>21 Feb 2020</td><td class="num">0.65</td></tr><tr><td>2021</td><td>Landsat 8 OLI</td><td>07 Feb 2021</td><td class="num">0.03</td></tr><tr><td>2022</td><td>Landsat 9 OLI-2</td><td>02 Feb 2022</td><td class="num">0.26</td></tr><tr><td>2023</td><td>Landsat 9 OLI-2</td><td>05 Feb 2023</td><td class="num">0.45</td></tr><tr><td>2024</td><td>Landsat 8 OLI</td><td>16 Feb 2024</td><td class="num">0.00</td></tr><tr><td>2025</td><td>Landsat 8 OLI</td><td>02 Feb 2025</td><td class="num">0.68</td></tr><tr><td>2026</td><td>Landsat 9 OLI-2</td><td>28 Jan 2026</td><td class="num">1.74</td></tr></tbody></table></div>
+<p>Landsat 5 covers 2004–2011, its last year of regular imaging. Landsat 7 fills 2012 and 2013, before Landsat 8 dry-season data existed. Landsat 7 images after May 2003 have wedge-shaped gaps from the failed scan line corrector; those pixels are skipped when zone means are taken. The 2004 scene was processed but left out of the trend series so that every NDVI year from 2005 has its preceding monsoon in the rainfall record.</p>
+
+<h2>Rainfall</h2>
+<p>IMD daily gridded rainfall at 0.25° resolution was read from the yearly NetCDF files for 2004–2025. Grid cells between 79.223°E and 79.719°E and between 18.552°N and 19.137°N were averaged for each day, then summed over the calendar year for annual rainfall and over June to September for monsoon rainfall. Monsoon rainfall averaged 988.2 mm over 2005–2025, with a low of 455 mm in 2004 and a high of 1522 mm in 2022.</p>
+
+<h2>Temperature</h2>
+<p>ERA5 2 m air temperature for 2004–2025 was cropped to the same box, averaged over it, converted from kelvin to °C, and averaged by year and over January and February. The January–February mean matches the dates of the Landsat scenes.</p>
+
+<h2>Coal production</h2>
+<p>Opencast, underground and total production for each financial year were entered from the SCCL annual reports in lakh tonnes. These are company-wide figures, covering all SCCL areas and not only the nine leases.</p>
+<div class="note"><p class="note-title">Correction applied</p><p>The 2004–05 total had been entered as 361.38 lakh tonnes, the same figure as 2005–06. Its opencast (223.29) and underground (129.74) values add to 353.03, which is the value used throughout this site.</p></div>
+</div>
+
+<nav class="pager" aria-label="Previous and next chapter"><a class="prev" href="study-area.html"><span class="dir">Previous</span>Study area</a><a class="next" href="methods.html"><span class="dir">Next</span>Methods</a></nav>
+<p class="foot">Last updated November 2026. Landsat data courtesy of USGS. Rainfall from IMD, temperature from ECMWF ERA5, lease boundaries from TGRAC, production from SCCL annual reports.</p>
+</main>
+</div>
+</body>
+</html>
